@@ -29,3 +29,7 @@
 - [x] Commenter le script analytics dans index.html (optionnel)
 - [x] Créer documentation ENV_SETUP.md
 
+
+
+- [x] Retirer les variables d'environnement de index.html pour éviter les warnings de build
+
