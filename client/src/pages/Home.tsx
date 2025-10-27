@@ -63,7 +63,7 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
               <Link 
-                href="/nos-agences" 
+                href="/contact" 
                 className="inline-flex items-center gap-2 bg-white text-[#0D1B3E] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all shadow-lg"
               >
                 <MapPin className="w-5 h-5" />
@@ -213,7 +213,7 @@ export default function Home() {
 
             <div className="text-center">
               <Link 
-                href="/nos-agences"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-[#0D1B3E] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1a2744] transition-all shadow-lg"
               >
                 Voir toutes nos agences
@@ -236,7 +236,7 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link 
-                href="/nos-agences"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-white text-[#0D1B3E] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all shadow-lg"
               >
                 Venir en agence

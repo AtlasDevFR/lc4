@@ -6,7 +6,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import QuiSommesNous from "./pages/QuiSommesNous";
-import NosAgences from "./pages/NosAgences";
+import Contact from "./pages/Contact";
 import Peintures from "./pages/Peintures";
 import PeintureCategory from "./pages/PeintureCategory";
 import RevêtementsSols from "./pages/RevêtementsSols";
@@ -20,7 +20,7 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/qui-sommes-nous"} component={QuiSommesNous} />
-      <Route path={"/nos-agences"} component={NosAgences} />
+      <Route path={"/contact"} component={Contact} />
       <Route path={"/peintures"} component={Peintures} />
       <Route path={"/peintures/:slug"} component={PeintureCategory} />
       <Route path={"/revetements-sols"} component={RevêtementsSols} />

@@ -48,7 +48,7 @@ export default function Header() {
       ],
     },
     { name: "Matériel & outillage", href: "/materiel-outillage" },
-    { name: "Nos agences", href: "/nos-agences" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (

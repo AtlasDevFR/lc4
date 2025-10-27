@@ -44,8 +44,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/nos-agences">
-                  <span className="text-gray-300 hover:text-white cursor-pointer">Nos agences</span>
+                <Link href="/contact">
+                  <span className="text-gray-300 hover:text-white cursor-pointer">Contact</span>
                 </Link>
               </li>
             </ul>
