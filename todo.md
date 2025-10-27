@@ -48,3 +48,9 @@
 - [x] Mettre à jour la page d'accueil pour refléter que c'est une zone de livraison (pas des agences)
 - [x] Modifier les boutons "Trouver une agence" en "Nous contacter"
 
+
+
+- [x] Intégrer les logos LC4 Peinture dans le site
+- [x] Copier les images logo dans client/public (logo.png, logo-full.png, logo-outline.png, favicon.png)
+- [x] Mettre à jour le Header avec le vrai logo
+

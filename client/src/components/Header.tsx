@@ -56,13 +56,12 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/">
-            <div className="flex items-center space-x-3 cursor-pointer">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-[#0D1B3E] font-bold text-lg">LC4</span>
-              </div>
-              <div className="text-xl font-bold">{APP_TITLE}</div>
-            </div>
+          <Link href="/" className="flex items-center gap-2">
+            <img 
+              src="/logo.png" 
+              alt="LC4 Peinture" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
