@@ -54,3 +54,7 @@
 - [x] Copier les images logo dans client/public (logo.png, logo-full.png, logo-outline.png, favicon.png)
 - [x] Mettre à jour le Header avec le vrai logo
 
+
+
+- [x] Ajouter scroll automatique vers le haut lors du changement de page
+
