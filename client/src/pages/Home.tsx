@@ -61,12 +61,11 @@ export default function Home() {
           {/* Contenu */}
           <div className="relative z-10 container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-              LC4 peinture
+              LC4 Peinture, votre expert en peinture et décoration.
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Découvrez nos produits haut de gamme<br />
-              pour vos projets résidentiels et professionnels
+Des produits haut de gamme pour sublimer vos espaces résidentiels et professionnels.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
