@@ -87,13 +87,69 @@ export default function Home() {
           </div>
         </section>
 
+  const partnerLogos = [
+    '/images/logo_onip.png',
+    '/images/logo_blancolor.jpg',
+    '/images/logo_altek.webp',
+    '/images/logo_tarkett.webp',
+  ];
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      
+      <main className="flex-1">
+        {/* HERO SECTION */}
+        <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden h-[80vh]">
+          {/* Background Image */}
+          <img 
+            src="/images/DSC00194.JPG" 
+            alt="Intérieur du magasin LC4 Peinture avec des pots de peinture" 
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-[#0D1B3E]/70" />
+          
+          {/* Contenu */}
+          <div className="relative z-10 container mx-auto px-4 text-center">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+              LC4 peinture
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Découvrez nos produits haut de gamme<br />
+              pour vos projets résidentiels et professionnels
+            </p>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+              <Link 
+                href="/contact" 
+                className="inline-flex items-center gap-2 bg-white text-[#0D1B3E] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all shadow-lg"
+              >
+                <MapPin className="w-5 h-5" />
+                Nous contacter
+              </Link>
+              
+              <Link 
+                href="/qui-sommes-nous" 
+                className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#0D1B3E] transition-all"
+              >
+                En savoir plus
+              </Link>
+            </div>
+            
+            <div className="flex flex-col items-center gap-3">
+              <p className="text-gray-300 text-sm font-medium">Notre agence :</p>
+              <span 
+                className="px-4 py-2 bg-[#0D1B3E]/60 backdrop-blur-sm text-white text-sm rounded-full border border-white/20"
+              >
+                Mundolsheim
+              </span>
+            </div>
+          </div>
+        </section>
+
         {/* SECTION PARTENAIRES */}
-        <InfiniteLogoSlider logos={[
-          "/images/logo-onip.png",
-          "/images/logo-blancolor.png",
-          "/images/logo-altek.png",
-          "/images/logo-tarkett.png",
-        ]} />
+        <InfiniteLogoSlider logos={partnerLogos} />
 
         {/* SECTION BIENVENUE */}
         <section className="py-16 md:py-24 bg-white">
