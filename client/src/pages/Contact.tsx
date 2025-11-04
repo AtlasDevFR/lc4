@@ -1,227 +1,261 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { COMPANY_INFO } from "@/const";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import React, { useState } from 'react';
+import { COMPANY_INFO, AGENCIES } from '@shared/const';
+import { Phone, Mail, MapPin, Star, Clock, Map, Check, Lightbulb, Car, Accessibility } from 'lucide-react';
 
-export default function Contact() {
+// Définir les options pour le dropdown "Solution souhaitée"
+const serviceOptions = [
+  "Sélectionnez un service",
+  "Peinture intérieure",
+  "Peinture extérieure",
+  "Revêtement de sol",
+  "Décoration",
+  "Rénovation",
+  "Autre",
+];
+
+// Composant pour les cartes d'information (style inspiré de LED Alsace)
+const ContactCard: React.FC<{ icon: React.ReactNode, title: string, content: React.ReactNode, color: string }> = ({ icon, title, content, color }) => (
+  <div className={`p-6 rounded-lg shadow-xl flex flex-col items-center text-center ${color} border border-gray-200`}>
+    <div className="text-4xl mb-4 p-3 rounded-full bg-white shadow-md text-blue-600">{icon}</div>
+    <h3 className="text-xl font-semibold mb-2">{title}</h3>
+    <div className="text-gray-600">{content}</div>
+  </div>
+);
+
+const Contact: React.FC = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    service: serviceOptions[0],
+    message: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Logique de soumission du formulaire (à implémenter)
+    console.log('Form submitted:', formData);
+    alert("Formulaire soumis (la soumission réelle n'est pas encore implémentée).");
+  };
+
+  // Informations LC4
+  const mainAgency = AGENCIES.find(agency => agency.isMain);
+  const otherZones = AGENCIES.filter(agency => !agency.isMain).map(agency => agency.name);
+
+  // Utiliser l'adresse de l'agence principale pour la carte
+  const mapAddress = mainAgency ? `${mainAgency.address}, ${mainAgency.zipCode} ${mainAgency.city}` : COMPANY_INFO.address;
+
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      
-      <main className="flex-1">
-        {/* Hero Section */}
-        <section 
-          className="relative h-[40vh] flex items-center justify-center text-white"
-          style={{
-            backgroundImage: "url('https://placehold.co/1920x600/0D1B3E/FFFFFF?text=Contactez-nous')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="absolute inset-0 bg-[#0D1B3E]/70"></div>
-          <div className="relative z-10 text-center px-4">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">Contactez-nous</h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-              Notre équipe est à votre écoute pour répondre à toutes vos questions
-            </p>
-          </div>
-        </section>
+    <div className="pt-20">
+      {/* Bannière d'introduction (style similaire à LED Alsace) */}
+      <div className="bg-gray-800 text-white py-20 px-4 text-center" style={{ backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/hero-contact.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <h1 className="text-5xl font-bold mb-4">Contactez-nous</h1>
+        <p className="text-xl max-w-3xl mx-auto">
+          Notre équipe est à votre écoute pour répondre à toutes vos questions et vous accompagner dans vos projets de peinture et décoration.
+        </p>
+      </div>
 
-        {/* Informations de contact */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4 max-w-6xl">
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <Card className="text-center">
-                <CardHeader>
-                  <div className="mx-auto w-16 h-16 bg-[#0D1B3E] rounded-full flex items-center justify-center mb-4">
-                    <Phone className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-xl">Téléphone</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <a href={`tel:${COMPANY_INFO.phone}`} className="text-lg text-[#0D1B3E] hover:underline">
-                    {COMPANY_INFO.phone}
-                  </a>
-                  <p className="text-sm text-gray-600 mt-2">Du lundi au vendredi</p>
-                </CardContent>
-              </Card>
+      <div className="container mx-auto px-4 py-12">
+        {/* Cartes d'information de contact */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <ContactCard
+            icon={<Phone className="w-6 h-6" />}
+            title="Téléphone"
+            content={<>Appelez-nous du lundi au vendredi<br /><span className="text-2xl font-bold text-blue-600">{COMPANY_INFO.phone}</span></>}
+            color="bg-yellow-50"
+          />
+          <ContactCard
+            icon={<Mail className="w-6 h-6" />}
+            title="Email"
+            content={<>Écrivez-nous à tout moment<br /><span className="text-blue-600">contact@lc4peinture.fr</span></>}
+            color="bg-purple-50"
+          />
+          <ContactCard
+            icon={<MapPin className="w-6 h-6" />}
+            title="Adresse"
+            content={<>Visitez notre agence principale<br />{COMPANY_INFO.address.split(',').map((line, index) => <span key={index} className="block">{line.trim()}</span>)}</>}
+            color="bg-green-50"
+          />
+          <ContactCard
+            icon={<Star className="w-6 h-6" />}
+            title="Avis Google"
+            content={<>Note moyenne sur {COMPANY_INFO.googleReviews.count} avis<br /><span className="text-2xl font-bold text-green-600">{COMPANY_INFO.googleReviews.rating} / 5</span></>}
+            color="bg-pink-50"
+          />
+        </div>
 
-              <Card className="text-center">
-                <CardHeader>
-                  <div className="mx-auto w-16 h-16 bg-[#0D1B3E] rounded-full flex items-center justify-center mb-4">
-                    <Mail className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-xl">Email</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <a href={`mailto:${COMPANY_INFO.email}`} className="text-lg text-[#0D1B3E] hover:underline break-all">
-                    {COMPANY_INFO.email}
-                  </a>
-                  <p className="text-sm text-gray-600 mt-2">Réponse sous 24h</p>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center">
-                <CardHeader>
-                  <div className="mx-auto w-16 h-16 bg-[#0D1B3E] rounded-full flex items-center justify-center mb-4">
-                    <Clock className="h-8 w-8 text-white" />
-                  </div>
-                  <CardTitle className="text-xl">Horaires</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-base text-gray-700">Lun - Ven : 8h - 18h</p>
-                  <p className="text-base text-gray-700">Sam : 9h - 12h</p>
-                  <p className="text-sm text-gray-600 mt-2">Fermé le dimanche</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Formulaire de contact */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-[#0D1B3E] mb-4">Envoyez-nous un message</h2>
-              <p className="text-lg text-gray-600">
-                Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais
-              </p>
-            </div>
-
-            <Card>
-              <CardContent className="p-8">
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="nom" className="block text-sm font-medium text-gray-700 mb-2">
-                        Nom *
-                      </label>
-                      <input
-                        type="text"
-                        id="nom"
-                        name="nom"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0D1B3E] focus:border-transparent outline-none transition"
-                        placeholder="Votre nom"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="prenom" className="block text-sm font-medium text-gray-700 mb-2">
-                        Prénom *
-                      </label>
-                      <input
-                        type="text"
-                        id="prenom"
-                        name="prenom"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0D1B3E] focus:border-transparent outline-none transition"
-                        placeholder="Votre prénom"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0D1B3E] focus:border-transparent outline-none transition"
-                        placeholder="votre@email.com"
-                      />
-                    </div>
-
-                    <div>
-                      <label htmlFor="telephone" className="block text-sm font-medium text-gray-700 mb-2">
-                        Téléphone
-                      </label>
-                      <input
-                        type="tel"
-                        id="telephone"
-                        name="telephone"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0D1B3E] focus:border-transparent outline-none transition"
-                        placeholder="+33 6 XX XX XX XX"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="sujet" className="block text-sm font-medium text-gray-700 mb-2">
-                      Sujet *
-                    </label>
-                    <input
-                      type="text"
-                      id="sujet"
-                      name="sujet"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0D1B3E] focus:border-transparent outline-none transition"
-                      placeholder="Objet de votre demande"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      required
-                      rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0D1B3E] focus:border-transparent outline-none transition resize-none"
-                      placeholder="Décrivez votre projet ou votre demande..."
-                    />
-                  </div>
-
-                  <div className="text-center">
-                    <Button 
-                      type="submit"
-                      size="lg"
-                      className="bg-[#0D1B3E] hover:bg-[#1a2744] px-12 py-6 text-lg"
-                    >
-                      Envoyer le message
-                    </Button>
-                  </div>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* Zone de livraison */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4 max-w-4xl text-center">
-            <h2 className="text-4xl font-bold text-[#0D1B3E] mb-6">Zone de livraison</h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Nous livrons dans toute l'Alsace et les environs
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="bg-white px-6 py-3 rounded-full shadow-md">
-                <span className="text-[#0D1B3E] font-semibold">Strasbourg</span>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {/* Formulaire de demande de devis */}
+          <div className="lg:col-span-2 p-8 border rounded-lg shadow-xl">
+            <h2 className="text-3xl font-bold mb-6">Demandez votre devis gratuit</h2>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">Prénom *</label>
+                  <input type="text" name="firstName" id="firstName" required
+                    placeholder="Votre prénom"
+                    value={formData.firstName} onChange={handleChange}
+                    className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">Nom *</label>
+                  <input type="text" name="lastName" id="lastName" required
+                    placeholder="Votre nom"
+                    value={formData.lastName} onChange={handleChange}
+                    className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
               </div>
-              <div className="bg-white px-6 py-3 rounded-full shadow-md">
-                <span className="text-[#0D1B3E] font-semibold">Souffelweyersheim</span>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email *</label>
+                <input type="email" name="email" id="email" required
+                  placeholder="votre.email@exemple.com"
+                  value={formData.email} onChange={handleChange}
+                  className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                />
               </div>
-              <div className="bg-white px-6 py-3 rounded-full shadow-md">
-                <span className="text-[#0D1B3E] font-semibold">Haguenau</span>
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Téléphone *</label>
+                <input type="tel" name="phone" id="phone" required
+                  placeholder="03 88 04 71 96"
+                  value={formData.phone} onChange={handleChange}
+                  className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                />
               </div>
-              <div className="bg-white px-6 py-3 rounded-full shadow-md">
-                <span className="text-[#0D1B3E] font-semibold">Schweighouse</span>
+              <div>
+                <label htmlFor="service" className="block text-sm font-medium text-gray-700">Service souhaité</label>
+                <select name="service" id="service"
+                  value={formData.service} onChange={handleChange}
+                  className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                >
+                  {serviceOptions.map((option, index) => (
+                    <option key={index} value={option}>{option}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700">Votre message *</label>
+                <textarea name="message" id="message" rows={4} required
+                  placeholder="Décrivez-nous votre projet..."
+                  value={formData.message} onChange={handleChange}
+                  className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                ></textarea>
+              </div>
+              <div className="flex justify-between items-center pt-4">
+                <button type="submit"
+                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                  <Mail className="w-5 h-5 mr-2" /> Envoyer ma demande
+                </button>
+                <button type="button"
+                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+                >
+                  <Phone className="w-5 h-5 mr-2" /> Être rappelé
+                </button>
+              </div>
+            </form>
+          </div>
+
+          {/* Informations complémentaires */}
+          <div className="space-y-8">
+            {/* Horaires d'ouverture */}
+            <div className="p-6 border rounded-lg shadow-md bg-yellow-50">
+              <h3 className="text-xl font-bold mb-4 flex items-center">
+                <Clock className="w-6 h-6 mr-2 text-yellow-600" /> Horaires d'ouverture
+              </h3>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span>Lundi - Vendredi</span>
+                  <span className="font-semibold">{COMPANY_INFO.openingHours.weekdays}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Samedi</span>
+                  <span className="font-semibold">{COMPANY_INFO.openingHours.saturday}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Dimanche</span>
+                  <span className="font-semibold">{COMPANY_INFO.openingHours.sunday}</span>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-      </main>
 
-      <Footer />
+            {/* Zone d'intervention */}
+            <div className="p-6 border rounded-lg shadow-md bg-green-50">
+              <h3 className="text-xl font-bold mb-4 flex items-center">
+                <Map className="w-6 h-6 mr-2 text-green-600" /> Zone d'intervention
+              </h3>
+              <p className="mb-3">Nous intervenons principalement dans la région de Strasbourg et ses alentours :</p>
+              <ul className="space-y-1">
+                <li className="flex items-center"><Check className="w-4 h-4 text-green-500 mr-2" />{mainAgency?.name} (Agence principale)</li>
+                {otherZones.map((zone, index) => (
+                  <li key={index} className="flex items-center"><Check className="w-4 h-4 text-green-500 mr-2" />{zone} (Zone de livraison)</li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Pourquoi nous contacter ? */}
+            <div className="p-6 border rounded-lg shadow-md bg-blue-50">
+              <h3 className="text-xl font-bold mb-4 flex items-center">
+                <Lightbulb className="w-6 h-6 mr-2 text-blue-600" /> Pourquoi nous contacter ?
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-center"><Check className="w-4 h-4 text-blue-500 mr-2" />Devis gratuit et sans engagement</li>
+                <li className="flex items-center"><Check className="w-4 h-4 text-blue-500 mr-2" />Conseils personnalisés par nos experts</li>
+                <li className="flex items-center"><Check className="w-4 h-4 text-blue-500 mr-2" />Réponse rapide</li>
+                <li className="flex items-center"><Check className="w-4 h-4 text-blue-500 mr-2" />Visite sur site possible</li>
+                <li className="flex items-center"><Check className="w-4 h-4 text-blue-500 mr-2" />Plus de 10 ans d'expérience</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Comment nous trouver ? */}
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold text-center mb-2">Comment nous trouver ?</h2>
+          <p className="text-center text-xl mb-8">Notre agence principale est située à Mundolsheim, près de Strasbourg</p>
+
+          {/* Carte Google Maps (Placeholder) */}
+          <div className="w-full h-96 bg-gray-200 rounded-lg shadow-xl mb-8 flex items-center justify-center">
+            <iframe
+              title="Google Maps LC4 PEINTURE & DECORATION"
+              width="100%"
+              height="100%"
+              style={{ border: 0, borderRadius: '0.5rem' }}
+              loading="lazy"
+              allowFullScreen
+              // L'API Key n'est pas nécessaire pour l'embed de base, mais l'adresse doit être encodée
+              src={`https://www.google.com/maps/embed/v1/place?q=${encodeURIComponent(mapAddress)}&zoom=15`}
+            ></iframe>
+          </div>
+
+          {/* Accès et commodités */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="p-6 border rounded-lg shadow-md">
+              <Car className="w-8 h-8 mx-auto mb-2 text-yellow-600" />
+              <h4 className="font-semibold">Parking gratuit</h4>
+              <p className="text-gray-600">Stationnement facile sur place</p>
+            </div>
+            <div className="p-6 border rounded-lg shadow-md">
+              <Accessibility className="w-8 h-8 mx-auto mb-2 text-green-600" />
+              <h4 className="font-semibold">Accès PMR</h4>
+              <p className="text-gray-600">Locaux accessibles à tous</p>
+            </div>
+            <div className="p-6 border rounded-lg shadow-md">
+              <Clock className="w-8 h-8 mx-auto mb-2 text-blue-600" />
+              <h4 className="font-semibold">Sur rendez-vous</h4>
+              <p className="text-gray-600">Visite conseillée sur RDV</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
+export default Contact;
