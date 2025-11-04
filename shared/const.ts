@@ -6,7 +6,7 @@ export const APP_LOGO = "/logo.svg";
 
 export const COMPANY_INFO = {
   name: "LC4 PEINTURE & DECORATION",
-  slogan: "Magasin de peinture à Mundolsheim",
+  slogan: "LC4 Peinture & Décoration à Mundolsheim",
   description: "L'achat, la vente, la distribution de tous produits et accessoires permettant tous travaux intérieurs ou extérieures, sur tout support, et toute matières et de tout produits du second œuvre. Nous sommes notés 5 étoiles sur 5 avec 73 avis Google.",
   phone: "03 88 04 71 96",
   email: "contact@lc4-peinture.fr",
