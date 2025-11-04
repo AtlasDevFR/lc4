@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { COMPANY_INFO, AGENCIES } from '@shared/const';
+import { COMPANY_INFO, AGENCIES, OPENING_HOURS } from '@shared/const';
 import { Phone, Mail, MapPin, Star, Clock, Map, Check, Lightbulb, Car, Accessibility } from 'lucide-react';
 
 // Définir les options pour le dropdown "Solution souhaitée"
@@ -172,15 +172,15 @@ const Contact: React.FC = () => {
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span>Lundi - Vendredi</span>
-                  <span className="font-semibold">{COMPANY_INFO.openingHours.weekdays}</span>
+                  <span className="font-semibold">{OPENING_HOURS.lundi}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Samedi</span>
-                  <span className="font-semibold">{COMPANY_INFO.openingHours.saturday}</span>
+                  <span className="font-semibold">{OPENING_HOURS.samedi}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Dimanche</span>
-                  <span className="font-semibold">{COMPANY_INFO.openingHours.sunday}</span>
+                  <span className="font-semibold">{OPENING_HOURS.dimanche}</span>
                 </div>
               </div>
             </div>

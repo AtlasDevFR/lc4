@@ -11,6 +11,10 @@ export const COMPANY_INFO = {
   phone: "03 88 04 71 96",
   email: "contact@lc4-peinture.fr",
   address: "3 Rue Alexandre Volta, 67450 Mundolsheim",
+  googleReviews: {
+    rating: 5,
+    count: 73,
+  },
 };
 
 export const OPENING_HOURS = {
