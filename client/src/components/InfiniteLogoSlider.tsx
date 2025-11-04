@@ -54,14 +54,14 @@ const InfiniteLogoSlider: React.FC<InfiniteLogoSliderProps> = ({ logos }) => {
         `}
       </style>
 
-      <div className="overflow-hidden w-full h-24 bg-white shadow-inner">
+      <div className="overflow-hidden w-full h-24 bg-white my-12">
         <div className="slider-track">
           {duplicatedLogos.map((logo, index) => (
             <div key={index} className="logo-item">
               <img 
                 src={logo} 
                 alt={`Logo partenaire ${index % logos.length + 1}`} 
-                className="max-h-full max-w-full object-contain"
+                className="max-h-full max-w-full object-contain h-16"
               />
             </div>
           ))}
