@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { PAINT_CATEGORIES } from "@/const";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, PaintBucket, CheckCircle, Palette, Leaf, Users } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -58,20 +58,18 @@ export default function Peintures() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {PAINT_CATEGORIES.map((category) => (
                 <Card key={category.id} className="hover:shadow-xl transition-shadow">
-                  <div className="aspect-video overflow-hidden rounded-t-lg">
-                    <img 
-                      src={`https://placehold.co/800x600/0D1B3E/FFFFFF?text=${encodeURIComponent(category.name)}`}
-                      alt={category.name}
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="flex justify-center mb-4">
+                    <div className="p-4 bg-[#0D1B3E] text-white rounded-full">
+                      <PaintBucket className="h-8 w-8" />
+                    </div>
                   </div>
-                  <CardHeader>
-                    <CardTitle className="text-xl">{category.name}</CardTitle>
-                    <CardDescription className="text-base">
+                  <CardHeader className="text-center">
+                    <CardTitle className="text-xl text-[#0D1B3E]">{category.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <CardDescription className="text-base mb-4">
                       {category.description}
                     </CardDescription>
-                  </CardHeader>
-                  <CardContent>
                     <Link href={`/peintures/${category.slug}`}>
                       <Button className="w-full bg-[#0D1B3E] hover:bg-[#0D1B3E]/90 group">
                         Découvrir
@@ -90,34 +88,46 @@ export default function Peintures() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-4xl font-bold mb-12 text-[#0D1B3E] text-center">Pourquoi choisir nos peintures ?</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-bold text-[#0D1B3E] mb-3">Qualité professionnelle</h3>
-                  <p className="text-gray-600">
-                    Nous sélectionnons uniquement des peintures de qualité professionnelle, 
-                    garantissant un résultat optimal et durable.
-                  </p>
+<div className="grid md:grid-cols-2 gap-8">
+                <div className="flex items-start space-x-4">
+                  <CheckCircle className="flex-shrink-0 h-8 w-8 text-[#0D1B3E]" />
+                  <div>
+                    <h3 className="text-xl font-bold text-[#0D1B3E] mb-1">Qualité professionnelle</h3>
+                    <p className="text-gray-600">
+                      Nous sélectionnons uniquement des peintures de qualité professionnelle, 
+                      garantissant un résultat optimal et durable.
+                    </p>
+                  </div>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-bold text-[#0D1B3E] mb-3">Large choix de finitions</h3>
-                  <p className="text-gray-600">
-                    Mate, satinée, brillante, velours... Trouvez la finition parfaite 
-                    pour chaque pièce et chaque style.
-                  </p>
+                <div className="flex items-start space-x-4">
+                  <Palette className="flex-shrink-0 h-8 w-8 text-[#0D1B3E]" />
+                  <div>
+                    <h3 className="text-xl font-bold text-[#0D1B3E] mb-1">Large choix de finitions</h3>
+                    <p className="text-gray-600">
+                      Mate, satinée, brillante, velours... Trouvez la finition parfaite 
+                      pour chaque pièce et chaque style.
+                    </p>
+                  </div>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-bold text-[#0D1B3E] mb-3">Respect de l'environnement</h3>
-                  <p className="text-gray-600">
-                    De nombreuses peintures labellisées et certifiées pour des projets 
-                    respectueux de l'environnement et de la santé.
-                  </p>
+                <div className="flex items-start space-x-4">
+                  <Leaf className="flex-shrink-0 h-8 w-8 text-[#0D1B3E]" />
+                  <div>
+                    <h3 className="text-xl font-bold text-[#0D1B3E] mb-1">Respect de l'environnement</h3>
+                    <p className="text-gray-600">
+                      De nombreuses peintures labellisées et certifiées pour des projets 
+                      respectueux de l'environnement et de la santé.
+                    </p>
+                  </div>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-bold text-[#0D1B3E] mb-3">Conseils d'experts</h3>
-                  <p className="text-gray-600">
-                    Nos équipes vous accompagnent dans le choix des produits et vous conseillent 
-                    sur les techniques d'application.
-                  </p>
+                <div className="flex items-start space-x-4">
+                  <Users className="flex-shrink-0 h-8 w-8 text-[#0D1B3E]" />
+                  <div>
+                    <h3 className="text-xl font-bold text-[#0D1B3E] mb-1">Conseils d'experts</h3>
+                    <p className="text-gray-600">
+                      Nos équipes vous accompagnent dans le choix des produits et vous conseillent 
+                      sur les techniques d'application.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
