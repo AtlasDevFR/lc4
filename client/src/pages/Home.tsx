@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import ModalRappel from "@/components/ModalRappel";
 import { useState, useEffect } from "react";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
-import { MapPin, Paintbrush, Home as HomeIcon, Frame, Wrench, Phone, ArrowRight } from "lucide-react";
+import { MapPin, Paintbrush, Home as HomeIcon, Frame, Wrench, Phone, ArrowRight, User } from "lucide-react";
 import { APP_TITLE, COMPANY_INFO, AGENCIES } from "@/const";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -206,57 +206,81 @@ Découvrez nos produits haut de gamme pour vos projets résidentiels et professi
 		
 		        {/* SECTION AVIS CLIENTS */}
 		        <FadeInOnScroll>
-          <section className="py-16 md:py-24 bg-white">
+          <section className="py-16 md:py-24 bg-gray-50">
 		          <div className="container mx-auto px-4 max-w-7xl">
 		            <div className="text-center mb-12">
 		              <h2 className="text-3xl md:text-4xl font-bold text-[#0D1B3E] mb-4">
 		                Ce que nos clients disent de nous
 		              </h2>
-		              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-		                Avis vérifiés sur Google pour LC4 PEINTURE & DECORATION
+		              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 font-semibold">
+		                ⭐ 4,9/5 — Basé sur 73 avis Google vérifiés
 		              </p>
 		            </div>
 		
 		            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 		              {/* Avis 1 */}
-		              <div className="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200">
+		              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
 		                <div className="flex items-center mb-3">
-		                  <div className="text-yellow-500 text-2xl mr-2">★★★★★</div>
-		                  <p className="text-sm text-gray-500">il y a 1 jour</p>
+		                  <div className="text-yellow-500 text-2xl mr-2">⭐⭐⭐⭐⭐</div>
 		                </div>
-		                <p className="text-gray-700 italic mb-4">
-		                  "J'ai acheté mon revêtement de sol en résine chez LC4 et j'en suis très content ! La qualité du produit est excellente, et le rendu final est impeccable, exactement ce que je voulais. Je le recommande vivement."
+		                <p className="text-[#0D1B3E] italic mb-4 leading-relaxed">
+		                  "J’ai acheté mon revêtement de sol en résine chez LC4 et j’en suis très content ! La qualité du produit est excellente, et le rendu final est impeccable, exactement ce que je voulais."
 		                </p>
-		                <p className="font-semibold text-[#0D1B3E]">- eyuphulya61 Inan</p>
+		                <div className="flex items-center">
+		                  <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3 text-gray-600 font-bold">
+		                    E
+		                  </div>
+		                  <p className="font-semibold text-[#0D1B3E]">— Eyuphulya Inan</p>
+		                </div>
 		              </div>
 		
 		              {/* Avis 2 */}
-		              <div className="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200">
+		              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
 		                <div className="flex items-center mb-3">
-		                  <div className="text-yellow-500 text-2xl mr-2">★★★★★</div>
-		                  <p className="text-sm text-gray-500">il y a 4 jours</p>
+		                  <div className="text-yellow-500 text-2xl mr-2">⭐⭐⭐⭐⭐</div>
 		                </div>
-		                <p className="text-gray-700 italic mb-4">
+		                <p className="text-[#0D1B3E] italic mb-4 leading-relaxed">
 		                  "Excellente qualité et professionnalisme. Je recommande vivement."
 		                </p>
-		                <p className="font-semibold text-[#0D1B3E]">- AYKUT ARIKTEKIN</p>
+		                <div className="flex items-center">
+		                  <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3 text-gray-600 font-bold">
+		                    A
+		                  </div>
+		                  <p className="font-semibold text-[#0D1B3E]">— Aykut Ariktekin</p>
+		                </div>
 		              </div>
 		
 		              {/* Avis 3 */}
-		              <div className="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200">
+		              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
 		                <div className="flex items-center mb-3">
-		                  <div className="text-yellow-500 text-2xl mr-2">★★★★★</div>
-		                  <p className="text-gray-500 text-sm">il y a 6 jours</p>
+		                  <div className="text-yellow-500 text-2xl mr-2">⭐⭐⭐⭐⭐</div>
 		                </div>
-		                <p className="text-gray-700 italic mb-4">
-		                  "Je suis extrêmement satisfait de ce fournisseur de peinture. La qualité des matériaux est impeccable, et les responsables sont très compétents et très professionnels. Je recommande vivement leurs services."
+		                <p className="text-[#0D1B3E] italic mb-4 leading-relaxed">
+		                  "Je suis extrêmement satisfait du fournisseur de peinture. La qualité des matériaux est impeccable et les responsables sont très compétents et professionnels."
 		                </p>
-		                <p className="font-semibold text-[#0D1B3E]">- Sadettin Sol</p>
-			              </div>
-			            </div>
-			          </div>
-			        </section>
-			        </FadeInOnScroll>
+		                <div className="flex items-center">
+		                  <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-3 text-gray-600 font-bold">
+		                    S
+		                  </div>
+		                  <p className="font-semibold text-[#0D1B3E]">— Sadettin Solak</p>
+		                </div>
+		              </div>
+		            </div>
+		            
+		            <div className="text-center mt-12">
+		              <a 
+		                href="https://g.page/r/CW3l4-22w05cEBM/review" 
+		                target="_blank" 
+		                rel="noopener noreferrer"
+		                className="inline-flex items-center gap-2 bg-[#0D1B3E] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1a2744] transition-all shadow-lg"
+		              >
+		                Voir plus d’avis sur Google
+		                <ArrowRight className="w-5 h-5" />
+		              </a>
+		            </div>
+		          </div>
+		        </section>
+		        </FadeInOnScroll>
 			
 			        {/* SECTION ZONE DE SERVICE */}		        <FadeInOnScroll>
           <section className="py-16 md:py-20 bg-gray-50">
