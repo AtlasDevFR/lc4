@@ -48,24 +48,7 @@ export default function RevêtementsSols() {
           </div>
 	        </section>
 
-		        {/* Galerie de Produits */}
-		        <section className="py-20">
-		          <div className="container mx-auto px-4">
-		            <h2 className="text-4xl font-bold mb-12 text-[#0D1B3E] text-center">Nos Produits en Image</h2>
-		            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-			              {/* Images de Revêtements de Sols */}
-			              {['DSC00164.JPG', 'DSC00234.JPG'].map((img, index) => (
-		                <div key={index} className="overflow-hidden rounded-lg shadow-lg aspect-square">
-		                  <img 
-		                    src={`/images/${img}`}
-		                    alt={`Revêtement de sol ${index + 1}`}
-		                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-		                  />
-		                </div>
-		              ))}
-		            </div>
-		          </div>
-		        </section>
+
 
 	        {/* Catégories */}
 	        <section className="py-20 bg-gray-50">
