@@ -250,8 +250,8 @@ Découvrez nos produits haut de gamme pour vos projets résidentiels et professi
 		          </div>
 		        </section>
 		
-			        {/* SECTION ZONE DE SERVICE */}
-			        <section className="py-16 md:py-20 bg-gray-50">
+		        {/* SECTION ZONE DE SERVICE */}
+		        <section className="py-16 md:py-20 bg-gray-50">
 		          <div className="container mx-auto px-4 max-w-5xl">
 		            <div className="text-center mb-12">
 		              <h2 className="text-3xl md:text-4xl font-bold text-[#0D1B3E] mb-4">
@@ -311,14 +311,48 @@ Découvrez nos produits haut de gamme pour vos projets résidentiels et professi
 	                Nous contacter
 	              </a>
 	            </div>
-	          </div>
-	        </section>
-	      </main>
-	
+	          </div>		        </section>
+		
+		        {/* SECTION CTA */}
+		        <section 
+		          className="relative py-20 md:py-32 bg-gray-100"
+		          style={{ 
+		            backgroundImage: `url('/images/cta/texture_peinture_claire.jpg')`,
+		            backgroundSize: 'cover',
+		            backgroundPosition: 'center',
+		          }}
+		        >
+		          <div className="absolute inset-0 bg-white/80" /> {/* Léger overlay blanc pour la lisibilité */}
+		          <div className="relative z-10 container mx-auto px-4 text-center">
+		            <h2 className="text-4xl md:text-5xl font-bold text-[#0D1B3E] mb-4">
+		              Prêt à transformer vos espaces ?
+		            </h2>
+		            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-10">
+		              Nos experts sont à votre disposition pour vous conseiller et vous accompagner dans votre projet.
+		            </p>
+		            
+		            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+		              <Link 
+		                href="/contact"
+		                className="inline-flex items-center gap-2 bg-[#0D1B3E] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1a2744] transition-all shadow-lg hover:shadow-2xl"
+		              >
+		                Nous contacter
+		              </Link>
+		              
+		              <button 
+		                onClick={() => setIsModalOpen(true)}
+		                className="inline-flex items-center gap-2 border-2 border-[#0D1B3E] text-[#0D1B3E] px-8 py-4 rounded-lg font-semibold hover:bg-[#0D1B3E] hover:text-white transition-all shadow-lg hover:shadow-2xl"
+		              >
+		                Demander un devis gratuit
+		              </button>
+		            </div>
+		          </div>
+		        </section>
+		
+		      </main>
+		      
 		      <Footer />
-          <ModalRappel isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-		    </div>
-		  );
-		}
-	
-	
+		      <ModalRappel isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+    </div>
+  );
+}
