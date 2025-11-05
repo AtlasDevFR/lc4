@@ -117,7 +117,7 @@ export default function QuiSommesNous() {
 
         {/* Chiffres Clés (Number Counter) */}
         <NumberCounter counters={[
-          { Icon: Clock, label: "Années d’expérience", value: 10, description: "Expertise cumulée dans le domaine" },
+          { Icon: Clock, label: "Années d’expérience", value: 20, description: "Expertise cumulée dans le domaine" },
           { Icon: Warehouse, label: "Agence", value: 1, description: "Basée à Mundolsheim, au cœur de l’Alsace" },
           { Icon: Handshake, label: "Partenaires", value: 4, description: "Fabricants français et européens majeurs" },
           { Icon: MessageSquare, label: "Clients fidèles", value: 50, description: "Professionnels et particuliers accompagnés" },
