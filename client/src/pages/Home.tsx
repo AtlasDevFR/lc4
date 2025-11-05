@@ -288,7 +288,7 @@ Découvrez nos produits haut de gamme pour vos projets résidentiels et professi
 		            
 		            <div className="text-center mt-12">
 		              <a 
-		                href="https://www.google.com/search?q=LC4+PEINTURE+%26+DECORATION+Avis" 
+		                href="https://www.google.com/search?q=avis+sur+lc4+peinture+%26+decoration+mundolsheim" 
 		                target="_blank" 
 		                rel="noopener noreferrer"
 		                className="inline-flex items-center gap-2 bg-[#0D1B3E] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#1a2744] transition-all shadow-lg"
