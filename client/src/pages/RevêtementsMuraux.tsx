@@ -30,25 +30,6 @@ export default function RevêtementsMuraux() {
           </div>
 	        </section>
 
-	        {/* Galerie de Produits */}
-	        <section className="py-20">
-	          <div className="container mx-auto px-4">
-	            <h2 className="text-4xl font-bold mb-12 text-[#0D1B3E] text-center">Nos Produits en Image</h2>
-	            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-	              {/* Images de Revêtements Muraux et Préparation */}
-	              {['DSC00170.JPG', 'DSC00175.JPG'].map((img, index) => (
-	                <div key={index} className="overflow-hidden rounded-lg shadow-lg aspect-square">
-	                  <img 
-	                    src={`/images/products/${img}`}
-	                    alt={`Produit de revêtement mural/préparation ${index + 1}`}
-	                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-	                  />
-	                </div>
-	              ))}
-	            </div>
-	          </div>
-	        </section>
-
 	        {/* Introduction */}
 	        <section className="py-20">
           <div className="container mx-auto px-4">
@@ -67,6 +48,25 @@ export default function RevêtementsMuraux() {
             </div>
           </div>
         </section>
+
+	        {/* Galerie de Produits */}
+	        <section className="py-20">
+	          <div className="container mx-auto px-4">
+	            <h2 className="text-4xl font-bold mb-12 text-[#0D1B3E] text-center">Nos Produits en Image</h2>
+	            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+	              {/* Images de Revêtements Muraux et Préparation */}
+	              {['DSC00170.JPG', 'DSC00175.JPG'].map((img, index) => (
+	                <div key={index} className="overflow-hidden rounded-lg shadow-lg aspect-square">
+	                  <img 
+	                    src={`/images/products/${img}`}
+	                    alt={`Produit de revêtement mural/préparation ${index + 1}`}
+	                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+	                  />
+	                </div>
+	              ))}
+	            </div>
+	          </div>
+	        </section>
 
         {/* Collections */}
         <section className="py-20 bg-gray-50">
