@@ -83,6 +83,7 @@ export const PAINT_CATEGORIES = [
     name: "Peintures intérieures",
     slug: "peintures-interieures",
     description: "Large gamme de peintures pour tous vos projets d'intérieur.",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663063275076/rksFZWGuVeCThLSg.png",
   },
   {
     id: "laques",
