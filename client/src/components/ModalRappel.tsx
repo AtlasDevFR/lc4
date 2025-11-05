@@ -38,7 +38,7 @@ const ModalRappel: React.FC<ModalRappelProps> = ({ isOpen, onClose }) => {
         </button>
 
         <div className="flex flex-col items-center text-center">
-          <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mb-4 shadow-lg">
+          <div className="w-16 h-16 bg-[#0D1B3E] rounded-full flex items-center justify-center mb-4 shadow-lg">
             <Phone className="w-8 h-8 text-white" />
           </div>
           <h2 className="text-2xl font-bold text-gray-800 mb-2">Être rappelé</h2>
@@ -60,7 +60,7 @@ const ModalRappel: React.FC<ModalRappelProps> = ({ isOpen, onClose }) => {
               placeholder="Votre nom"
               value={formData.nomComplet}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500 transition"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-[#0D1B3E] focus:border-[#0D1B3E] transition"
             />
           </div>
           <div>
@@ -75,7 +75,7 @@ const ModalRappel: React.FC<ModalRappelProps> = ({ isOpen, onClose }) => {
               placeholder="06 12 34 56 78"
               value={formData.telephone}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500 transition"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-[#0D1B3E] focus:border-[#0D1B3E] transition"
             />
           </div>
 
@@ -89,7 +89,7 @@ const ModalRappel: React.FC<ModalRappelProps> = ({ isOpen, onClose }) => {
             </button>
             <button
               type="submit"
-              className="px-4 py-2 bg-yellow-500 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition"
+              className="px-4 py-2 bg-[#0D1B3E] text-white font-semibold rounded-lg shadow-md hover:bg-[#0D1B3E]/90 transition"
             >
               Envoyer
             </button>
