@@ -134,7 +134,7 @@ export default function QuiSommesNous() {
                   trois domaines complémentaires qui constituent le cœur de notre activité.
                 </p>
                 <div className="grid md:grid-cols-3 gap-6 my-8">
-	                  <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+	                  <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
 	                    <PaintBucket className="h-10 w-10 text-[#0D1B3E] mb-4" />
 	                    <h3 className="text-xl font-bold text-[#0D1B3E] mb-3">Peintures</h3>
 	                    <p className="text-gray-600">
@@ -142,7 +142,7 @@ export default function QuiSommesNous() {
 	                      Nous proposons une gamme complète de peintures professionnelles adaptées à tous les supports.
 	                    </p>
 	                  </div>
-	                  <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+	                  <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
 	                    <Layers3 className="h-10 w-10 text-[#0D1B3E] mb-4" />
 	                    <h3 className="text-xl font-bold text-[#0D1B3E] mb-3">Revêtements de sols</h3>
 	                    <p className="text-gray-600">
@@ -150,7 +150,7 @@ export default function QuiSommesNous() {
 	                      et esthétiques pour tous les environnements résidentiels et professionnels.
 	                    </p>
 	                  </div>
-	                  <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
+	                  <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
 	                    <BrickWall className="h-10 w-10 text-[#0D1B3E] mb-4" />
 	                    <h3 className="text-xl font-bold text-[#0D1B3E] mb-3">Revêtements muraux</h3>
 	                    <p className="text-gray-600">
