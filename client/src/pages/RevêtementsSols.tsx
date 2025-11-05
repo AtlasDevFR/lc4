@@ -53,8 +53,8 @@ export default function RevêtementsSols() {
 		          <div className="container mx-auto px-4">
 		            <h2 className="text-4xl font-bold mb-12 text-[#0D1B3E] text-center">Nos Produits en Image</h2>
 		            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-		              {/* Images de Revêtements de Sols */}
-		              {['DSC00224.JPG'].map((img, index) => (
+			              {/* Images de Revêtements de Sols */}
+			              {['DSC00224.JPG', 'DSC00234.JPG'].map((img, index) => (
 		                <div key={index} className="overflow-hidden rounded-lg shadow-lg aspect-square">
 		                  <img 
 		                    src={`/images/products/${img}`}

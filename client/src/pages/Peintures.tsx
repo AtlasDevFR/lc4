@@ -54,8 +54,10 @@ export default function Peintures() {
 		          <div className="container mx-auto px-4">
 		            <h2 className="text-4xl font-bold mb-12 text-[#0D1B3E] text-center">Nos Produits en Image</h2>
 		            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-		              {/* Images de Peinture */}
-		              {['DSC00211.JPG', 'DSC00200.JPG', 'DSC00182.JPG', 'DSC00155.JPG', 'DSC00160.JPG', 'DSC00164.JPG'].map((img, index) => (
+			              {/* Images de Peinture (Supprimées à la demande de l'utilisateur) */}
+			              {/* L'utilisateur ne veut pas voir d'images de peinture directement. */}
+			              {/* Le tableau est laissé vide pour l'instant. */}
+			              {[''].filter(Boolean).map((img, index) => (
 		                <div key={index} className="overflow-hidden rounded-lg shadow-lg aspect-square">
 		                  <img 
 		                    src={`/images/products/${img}`}
