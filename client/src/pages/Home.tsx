@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import ModalRappel from "@/components/ModalRappel";
 import { useState, useEffect } from "react";
 import FadeInOnScroll from "@/components/FadeInOnScroll";
-import { MapPin, Paintbrush, Home as HomeIcon, Frame, Wrench, Phone, ArrowRight, User } from "lucide-react";
+import { MapPin, Paintbrush, Home as HomeIcon, Frame, Wrench, Phone, ArrowRight, User, Star } from "lucide-react";
 import { APP_TITLE, COMPANY_INFO, AGENCIES } from "@/const";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -212,16 +212,23 @@ Découvrez nos produits haut de gamme pour vos projets résidentiels et professi
 		              <h2 className="text-3xl md:text-4xl font-bold text-[#0D1B3E] mb-4">
 		                Ce que nos clients disent de nous
 		              </h2>
-		              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 font-semibold">
-		                ⭐ 4,9/5 — Basé sur 73 avis Google vérifiés
-		              </p>
+<div className="flex items-center justify-center gap-2 text-xl text-gray-600 max-w-3xl mx-auto mb-8 font-semibold">
+			                <Star className="w-6 h-6 text-yellow-500 fill-yellow-500" />
+			                <span>4,9/5 — Basé sur 73 avis Google vérifiés</span>
+			              </div>
 		            </div>
 		
 		            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 		              {/* Avis 1 */}
 		              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
 		                <div className="flex items-center mb-3">
-		                  <div className="text-yellow-500 text-2xl mr-2">⭐⭐⭐⭐⭐</div>
+		                  <div className="flex gap-1 text-yellow-500">
+			                    <Star className="w-5 h-5 fill-yellow-500" />
+			                    <Star className="w-5 h-5 fill-yellow-500" />
+			                    <Star className="w-5 h-5 fill-yellow-500" />
+			                    <Star className="w-5 h-5 fill-yellow-500" />
+			                    <Star className="w-5 h-5 fill-yellow-500" />
+			                  </div>
 		                </div>
 		                <p className="text-[#0D1B3E] italic mb-4 leading-relaxed">
 		                  "J’ai acheté mon revêtement de sol en résine chez LC4 et j’en suis très content ! La qualité du produit est excellente, et le rendu final est impeccable, exactement ce que je voulais."
@@ -237,7 +244,13 @@ Découvrez nos produits haut de gamme pour vos projets résidentiels et professi
 		              {/* Avis 2 */}
 		              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
 		                <div className="flex items-center mb-3">
-		                  <div className="text-yellow-500 text-2xl mr-2">⭐⭐⭐⭐⭐</div>
+		                  <div className="flex gap-1 text-yellow-500">
+			                    <Star className="w-5 h-5 fill-yellow-500" />
+			                    <Star className="w-5 h-5 fill-yellow-500" />
+			                    <Star className="w-5 h-5 fill-yellow-500" />
+			                    <Star className="w-5 h-5 fill-yellow-500" />
+			                    <Star className="w-5 h-5 fill-yellow-500" />
+			                  </div>
 		                </div>
 		                <p className="text-[#0D1B3E] italic mb-4 leading-relaxed">
 		                  "Excellente qualité et professionnalisme. Je recommande vivement."
@@ -253,7 +266,13 @@ Découvrez nos produits haut de gamme pour vos projets résidentiels et professi
 		              {/* Avis 3 */}
 		              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl">
 		                <div className="flex items-center mb-3">
-		                  <div className="text-yellow-500 text-2xl mr-2">⭐⭐⭐⭐⭐</div>
+		                  <div className="flex gap-1 text-yellow-500">
+			                    <Star className="w-5 h-5 fill-yellow-500" />
+			                    <Star className="w-5 h-5 fill-yellow-500" />
+			                    <Star className="w-5 h-5 fill-yellow-500" />
+			                    <Star className="w-5 h-5 fill-yellow-500" />
+			                    <Star className="w-5 h-5 fill-yellow-500" />
+			                  </div>
 		                </div>
 		                <p className="text-[#0D1B3E] italic mb-4 leading-relaxed">
 		                  "Je suis extrêmement satisfait du fournisseur de peinture. La qualité des matériaux est impeccable et les responsables sont très compétents et professionnels."
