@@ -18,7 +18,7 @@ const serviceOptions = [
 
 // Composant pour les cartes d'information (style inspiré de LED Alsace)
 const ContactCard: React.FC<{ icon: React.ReactNode, title: string, content: React.ReactNode, color: string }> = ({ icon, title, content, color }) => (
-  <div className={`p-6 rounded-lg shadow-xl flex flex-col items-center text-center ${color} border border-gray-200`}>
+  <div className={`p-6 rounded-lg shadow-xl flex flex-col items-center text-center justify-center h-full ${color} border border-gray-200`}>
     <div className="text-4xl mb-4 p-3 rounded-full bg-white shadow-md text-blue-600">{icon}</div>
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <div className="text-gray-600">{content}</div>
@@ -37,7 +37,7 @@ const ClickableContactCard: React.FC<{
     href={href} 
     target="_blank" 
     rel="noopener noreferrer" 
-    className="block relative transition-all duration-300 hover:shadow-2xl"
+    className="block relative transition-all duration-300 hover:shadow-2xl h-full"
   >
     <ContactCard icon={icon} title={title} content={content} color={color} />
   </a>
