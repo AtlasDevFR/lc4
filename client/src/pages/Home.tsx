@@ -10,6 +10,7 @@ import { APP_TITLE, COMPANY_INFO, AGENCIES } from "@/const";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PartnerLogoSlider from "@/components/PartnerLogoSlider";
+import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 
 
 
@@ -95,12 +96,17 @@ Magasin de Peinture & Décoration
 			
 				        {/* SECTION PARTENAIRES */}
 		        <ScrollReveal direction="up" delay={0.2}>
-		          <section className="py-12 bg-white bg-gradient-animated-slow">
+          <section className="py-12 bg-white bg-gradient-animated-slow">
           <div className="container mx-auto px-4">
             <PartnerLogoSlider />
-					           			          </div>
-					        </section>
-		        </ScrollReveal>
+			           			          </div>
+			        </section>
+	        </ScrollReveal>
+
+        {/* Section Avis Google */}
+        <ScrollReveal direction="up" delay={0.2}>
+          <GoogleReviewsWidget />
+        </ScrollReveal>
 				
 				        {/* SECTION BIENVENUE */}        <ScrollReveal direction="up" delay={0.2}>
           <section className="py-16 md:py-24 bg-white bg-gradient-animated">
