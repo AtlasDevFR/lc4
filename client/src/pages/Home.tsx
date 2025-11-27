@@ -114,13 +114,13 @@ Magasin de Peinture & Décoration
 		                LC4 Peinture & Décoration est votre partenaire de confiance à Mundolsheim pour tous vos projets de peinture, revêtements de sols et muraux. Nous mettons notre expertise au service des professionnels et des particuliers exigeants.
 		              </p>
 		              
-		              <p className="text-lg text-gray-600 leading-relaxed">
-		                Notre équipe de professionnels vous conseille et vous accompagne de A à Z, de la sélection des produits à la réalisation de vos chantiers. Nous vous garantissons des produits performants et un service de qualité.
-		              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Notre équipe vous conseille et vous accompagne de A à Z, de la sélection des produits jusqu'à la préparation et la mise en œuvre par vos propres applicateurs ou par les professionnels avec lesquels vous travaillez. Nous ne réalisons pas les chantiers, mais nous vous guidons vers les solutions les plus adaptées et performantes.
+              </p>
 		              
-			              <p className="text-lg text-gray-600 leading-relaxed">
-			                Situés à Mundolsheim, nous couvrons les zones de Strasbourg, Souffelweyersheim, Haguenau et Schweighouse. Contactez-nous pour un devis personnalisé.
-			              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Basés à Mundolsheim, nous bénéficions de partenariats solides et d'exclusivités dans notre secteur géographique, notamment à Strasbourg, Souffelweyersheim, Haguenau et Schweighouse, ce qui nous permet de proposer des produits et services parfaitement adaptés aux besoins locaux.
+              </p>
 			            </div>
 			            
 			            <div className="text-center mt-8">
