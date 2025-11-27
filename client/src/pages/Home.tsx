@@ -30,7 +30,7 @@ export default function Home() {
     {
       icon: HomeIcon,
       title: "Revêtements de sols",
-      description: "Parquets, parquet contrecollé, stratifiés, vinyles et moquettes pour tous les usages",
+      description: "Parquets, parquet contrecollé, stratifiés, Vinyle, LVT et moquettes pour tous les usages",
       href: "/revetements-sols",
     },
     {
