@@ -30,13 +30,13 @@ export default function Home() {
     {
       icon: HomeIcon,
       title: "Revêtements de sols",
-      description: "Parquets, stratifiés, vinyles et moquettes pour tous les usages",
+      description: "Parquets, parquet contrecollé, stratifiés, vinyles et moquettes pour tous les usages",
       href: "/revetements-sols",
     },
     {
       icon: Frame,
       title: "Revêtements muraux",
-      description: "Collections exclusives alliant esthétique et durabilité",
+      description: "Peinture à la chaux, stucco, enduits décoratifs et collections exclusives",
       href: "/revetements-muraux",
     },
     {
