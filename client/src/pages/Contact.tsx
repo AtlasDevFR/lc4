@@ -215,11 +215,11 @@ const Contact: React.FC = () => {
               {/* Zone d'intervention */}
               <div className="p-6 border rounded-lg shadow-md bg-green-50">
                 <h3 className="text-xl font-bold mb-4 flex items-center">
-                  <Map className="w-6 h-6 mr-2 text-green-600" /> Nos zones de service
+                  <Map className="w-6 h-6 mr-2 text-green-600" /> Service de livraison express
                 </h3>
-                <p className="mb-3">Nous vous servons dans les zones suivantes :</p>
+                <p className="mb-3">Nous livrons dans les communes suivantes :</p>
                 <ul className="space-y-1">
-                  {["Mundolsheim", "Strasbourg", "Souffelweyersheim", "Haguenau", "Schweighouse"].map((city, index) => (
+                  {["Mundolsheim", "Strasbourg", "Souffelweyersheim", "Haguenau", "Schweighouse", "Molsheim", "Sélestat", "Colmar", "Schirmeck", "Saverne"].map((city, index) => (
                     <li key={index} className="flex items-center"><Check className="w-4 h-4 text-green-500 mr-2" />{city}</li>
                   ))}
                 </ul>
