@@ -49,9 +49,9 @@ export default function QuiSommesNous() {
 	                />
 	                <div className="prose prose-lg max-w-none text-gray-700 order-1 md:order-2">
 	                    <h3 className="text-2xl font-bold text-[#0D1B3E] mb-4">La Genèse : L'opportunité d'une nouvelle expertise</h3>
-	                    <p className="text-lg leading-relaxed">
-	                        LC4 Peinture & Décoration est née en mai 2025 à Mundolsheim (Bas-Rhin), de la volonté de ses fondateurs, Yasin Yilmaz (Président) et Sefa Celik (Directeur Général). Forts de plus de 20 ans d'expérience cumulée dans le secteur de la peinture professionnelle, ils ont transformé la fermeture de l'entreprise SAGOS en une opportunité de création. Cette nouvelle aventure a permis de préserver un savoir-faire local et de redonner vie à un lieu d'expertise reconnu.
-	                    </p>
+                    <p className="text-lg leading-relaxed">
+                        LC4 Peinture & Décoration est née en mai 2025 à Mundolsheim (Bas-Rhin), portée par l'envie de créer une structure locale spécialisée dans la peinture professionnelle et la décoration. Forts d'une expérience riche dans plusieurs magasins renommés du secteur, ses fondateurs ont transformé leur savoir-faire en une nouvelle aventure, préservant ainsi un haut niveau d'expertise reconnu par les professionnels et les particuliers.
+                    </p>
 	                </div>
 	              </div>
 	              </ScrollReveal>
@@ -62,9 +62,9 @@ export default function QuiSommesNous() {
 	                {/* Texte à gauche, Image à droite */}
 	                <div className="prose prose-lg max-w-none text-gray-700">
 	                    <h3 className="text-2xl font-bold text-[#0D1B3E] mb-4">Notre Mission : Qualité, Proximité et Conseil</h3>
-	                    <p className="text-lg leading-relaxed">
-	                        Notre mission est claire : offrir aux professionnels et aux particuliers des produits techniques de la plus haute qualité, tout en garantissant un conseil personnalisé et un service de proximité inégalé. Nous collaborons avec des partenaires de renom comme ONIP Peintures, Blancolor, Tarkett et Alltek pour vous proposer des solutions durables et esthétiques pour tous vos projets de peinture, revêtements de sols et muraux.
-	                    </p>
+                    <p className="text-lg leading-relaxed">
+                        Notre mission est claire : fournir des produits techniques de haute qualité tout en garantissant un conseil personnalisé et un service de proximité. Nous collaborons avec des partenaires de renom tels que Blancolor, Akzo Nobel, Astral, Sikkens, Tarkett, Semin, Bostik, Blanchon, et bien d'autres, pour vous proposer des solutions durables et esthétiques adaptées à tous vos projets de peinture et revêtements.
+                    </p>
 	                </div>
 	                <img 
 	                    src="/images/DSC00169.JPG" 
@@ -85,9 +85,9 @@ export default function QuiSommesNous() {
 	                />
 	                <div className="prose prose-lg max-w-none text-gray-700 order-1 md:order-2">
 	                    <h3 className="text-2xl font-bold text-[#0D1B3E] mb-4">Notre Vision : Ancrage Local et Transmission</h3>
-	                    <p className="text-lg leading-relaxed">
-	                        LC4 s'engage pour l'Alsace. Notre vision est de continuer à nous développer tout en créant de l'emploi local et en assurant la transmission de notre expertise aux nouvelles générations. Nous sommes votre partenaire de confiance, dédié à la réussite de vos chantiers.
-	                    </p>
+                    <p className="text-lg leading-relaxed">
+                        LC4 s'engage pour l'Alsace. Nous souhaitons développer notre activité tout en créant de l'emploi local et en transmettant notre expertise aux nouvelles générations. Nous sommes votre partenaire de confiance, dédié à la réussite de vos chantiers et à l'accompagnement de vos projets.
+                    </p>
 	                </div>
 	              </div>
 	              </ScrollReveal>
