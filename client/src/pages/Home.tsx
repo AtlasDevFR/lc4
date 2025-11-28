@@ -10,6 +10,7 @@ import { APP_TITLE, COMPANY_INFO, AGENCIES } from "@/const";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PartnerLogoSlider from "@/components/PartnerLogoSlider";
+import GoogleReviewsWidget from "@/components/GoogleReviewsWidget";
 
 
 
@@ -188,99 +189,13 @@ Magasin de Peinture & Décoration
         </section>
         </ScrollReveal>
 			
-			        {/* SECTION AVIS CLIENTS */}
+        {/* SECTION AVIS CLIENTS */}
         <ScrollReveal direction="up" delay={0.2}>
           <section className="py-16 md:py-24 bg-gray-50 bg-gradient-animated">
-			          <div className="container mx-auto px-4 max-w-7xl">
-			            <div className="text-center mb-12">
-			              <h2 className="text-3xl md:text-4xl font-bold text-[#0D1B3E] mb-4">
-			                Ce que nos clients disent de nous
-			              </h2>
-<div className="flex items-center justify-center gap-2 text-xl text-gray-600 max-w-3xl mx-auto mb-8 font-semibold">
-				                <Star className="w-6 h-6 text-yellow-500 fill-yellow-500" />
-				                <span>4,9/5 — Basé sur 73 avis Google vérifiés</span>
-				              </div>
-			            </div>
-			
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Avis 1 */}
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl testimonial-animate card-animate">
-			                <div className="flex items-center mb-3">
-			                  <div className="flex gap-1 text-yellow-500">
-				                    <Star className="w-5 h-5 fill-yellow-500" />
-				                    <Star className="w-5 h-5 fill-yellow-500" />
-				                    <Star className="w-5 h-5 fill-yellow-500" />
-				                    <Star className="w-5 h-5 fill-yellow-500" />
-				                    <Star className="w-5 h-5 fill-yellow-500" />
-				                  </div>
-			                </div>
-			                <p className="text-[#0D1B3E] italic mb-4 leading-relaxed">
-			                  "Excellent accueil et conseils avisés. Je recommande vivement ce magasin pour la qualité de ses produits et son service client irréprochable."
-			                </p>
-			                <div className="flex items-center">
-			                  <User className="w-6 h-6 text-gray-400 mr-3" />
-			                  <span className="font-semibold text-[#0D1B3E]">— Client vérifié</span>
-			                </div>
-			              </div>
-			
-              {/* Avis 2 */}
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl testimonial-animate card-animate" style={{ animationDelay: '150ms' }}>
-			                <div className="flex items-center mb-3">
-			                  <div className="flex gap-1 text-yellow-500">
-				                    <Star className="w-5 h-5 fill-yellow-500" />
-				                    <Star className="w-5 h-5 fill-yellow-500" />
-				                    <Star className="w-5 h-5 fill-yellow-500" />
-				                    <Star className="w-5 h-5 fill-yellow-500" />
-				                    <Star className="w-5 h-5 fill-yellow-500" />
-				                  </div>
-			                </div>
-			                <p className="text-[#0D1B3E] italic mb-4 leading-relaxed">
-			                  "Un choix immense de produits de qualité et une équipe toujours à l'écoute. C'est mon adresse de référence pour tous mes chantiers."
-			                </p>
-			                <div className="flex items-center">
-			                  <User className="w-6 h-6 text-gray-400 mr-3" />
-			                  <span className="font-semibold text-[#0D1B3E]">— Artisan partenaire</span>
-			                </div>
-			              </div>
-			
-              {/* Avis 3 */}
-              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl testimonial-animate card-animate" style={{ animationDelay: '300ms' }}>
-			                <div className="flex items-center mb-3">
-			                  <div className="flex gap-1 text-yellow-500">
-				                    <Star className="w-5 h-5 fill-yellow-500" />
-				                    <Star className="w-5 h-5 fill-yellow-500" />
-				                    <Star className="w-5 h-5 fill-yellow-500" />
-				                    <Star className="w-5 h-5 fill-yellow-500" />
-				                    <Star className="w-5 h-5 fill-yellow-500" />
-				                  </div>
-			                </div>
-			                <p className="text-[#0D1B3E] italic mb-4 leading-relaxed">
-			                  "Le personnel est très compétent et sympathique. Ils ont su me guider vers les produits parfaits pour mon projet de rénovation."
-			                </p>
-			                <div className="flex items-center">
-			                  <User className="w-6 h-6 text-gray-400 mr-3" />
-			                  <span className="font-semibold text-[#0D1B3E]">— Particulier satisfait</span>
-			                </div>
-              </div>
-		            </div>
-
-              {/* Bouton Voir tous les avis */}
-              <div className="text-center mt-12">
-                <a
-                  href="https://www.google.com/search?q=LC4+PEINTURE+%26+DECORATION+Mundolsheim"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#0D1B3E] text-white font-semibold rounded-lg hover:bg-[#1a2744] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                >
-                  <Star className="w-5 h-5" />
-                  Voir tous les avis sur Google
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </div>
-		          </div>
-		        </section>
+            <div className="container mx-auto px-4 max-w-7xl">
+              <GoogleReviewsWidget />
+            </div>
+          </section>
         </ScrollReveal>
 		
 		        {/* SECTION CONTACT */}
