@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0D1B3E] text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* À propos */}
           <div>
             <h3 className="text-xl font-bold mb-4">LC4</h3>
@@ -48,17 +48,6 @@ export default function Footer() {
                   <span className="text-gray-300 hover:text-white cursor-pointer">Contact</span>
                 </Link>
               </li>
-            </ul>
-          </div>
-
-          {/* Nos agences */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Nos agences</h3>
-            <ul className="space-y-2 text-gray-300 text-sm">
-              <li>Strasbourg</li>
-              <li>Souffelweyersheim</li>
-              <li>Haguenau</li>
-              <li>Schweighouse-sur-Moder</li>
             </ul>
           </div>
 
