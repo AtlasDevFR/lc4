@@ -126,7 +126,7 @@ export default function GoogleReviewsWidget() {
           <span className="text-2xl font-bold text-[#0D1B3E]">5.0</span>
         </div>
         <p className="text-lg text-gray-600 font-medium">
-          Basé sur 89 avis Google vérifiés
+          Basé sur nos avis Google vérifiés
         </p>
       </div>
 
